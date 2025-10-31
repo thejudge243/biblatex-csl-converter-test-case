@@ -16,4 +16,5 @@ jobs:
               uses: actions/checkout@v4
             - run: |
                   npm install -g eslint
+                  npx eslint --init
                   npm test
