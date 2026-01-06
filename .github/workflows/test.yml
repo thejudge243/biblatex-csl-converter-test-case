@@ -1,4 +1,4 @@
-name: Test CI
+name: TestCI
 
 on:
     push:
@@ -15,6 +15,5 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
             - run: |
-                  npm install -g eslint
-                  npm eslint --init
-                  npm test
+                  npm install
+                  npm tests
