@@ -8,41 +8,11 @@ on:
     pull_request:
         branches:
             - "*"
-#jobs:
-    # test:
-    #     runs-on: ubuntu-latest
-    #     steps:
-    #         - name: Checkout
-    #           uses: actions/checkout@v4
-    #         - run: |
-    #               npm test
-
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'        # or 18/22 to match your project
-
-      - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
-
-      # --- Optional: run ESLint (uncomment if you want lint in CI) ---
-      # - name: Lint
-      #   run: |
-      #     npx eslint . --max-warnings=0
-      #     # or: npm run lint
-      # ---------------------------------------------------------------
-
-      - name: Run tests
-        run: npm test
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - run: |
+                  npm test
