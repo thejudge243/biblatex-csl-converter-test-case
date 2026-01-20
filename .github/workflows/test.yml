@@ -12,7 +12,7 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
+            - name: Checkout Test
               uses: actions/checkout@v4
             - run: |
                   npm test
