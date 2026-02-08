@@ -19,5 +19,5 @@ jobs:
               with:
                 node-version: '18'
             - run: |
-                npm ci
+                npm install
                 npm test
