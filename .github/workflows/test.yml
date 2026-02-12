@@ -15,4 +15,5 @@ jobs:
             - name: Checkouts
               uses: actions/checkout@v4
             - run: |
+                  npm -g i eslint-cli
                   npm test
