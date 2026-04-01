@@ -1,3 +1,4 @@
+
 name: Test CI
 
 on:
@@ -12,8 +13,7 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkouts
+            - name: Checkout
               uses: actions/checkout@v4
             - run: |
-                  npm install eslint --save-dev
                   npm test
